@@ -1,0 +1,3 @@
+mkdocs>=1.5
+mkdocs-material>=9.5
+# pymdown-extensions (superfences, etc.) is pulled in by mkdocs-material — required for Mermaid fenced blocks in mkdocs.yml

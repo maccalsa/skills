@@ -1,0 +1,38 @@
+# Python / MkDocs
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# MkDocs local build output (built in docs/site when running from docs/)
+docs/site/
+site/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs & caches
+*.log
+.cache/
+.mkdocs_cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Optional local tooling
+*.egg-info/
+dist/
+build/
