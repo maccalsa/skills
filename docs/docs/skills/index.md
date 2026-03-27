@@ -14,6 +14,7 @@ In Cursor, `@mention` the skill so the agent loads the project’s **`SKILL.md`*
 | **Bugs** | [triage-issue](triage-issue.md) |
 | **Repo & GitHub** | [greenfield-scaffold](greenfield-scaffold.md), [issue-to-pr](issue-to-pr.md), [mirror-repo-github](mirror-repo-github.md) |
 | **Neon Postgres** | [neon-postgres](neon-postgres.md), [neon-postgres-egress-optimizer](neon-postgres-egress-optimizer.md) |
+| **Tech lead & delivery** | [tech-lead-unblock](tech-lead-unblock.md), [tech-lead-jira-tickets](tech-lead-jira-tickets.md) |
 | **Cursor authoring** | [create-rule](create-rule.md), [create-skill](create-skill.md), [update-cursor-settings](update-cursor-settings.md), [migrate-to-skills](migrate-to-skills.md), [create-subagent](create-subagent.md) |
 
 ## All skills (A–Z)
@@ -40,6 +41,8 @@ In Cursor, `@mention` the skill so the agent loads the project’s **`SKILL.md`*
 | [request-refactor-plan](request-refactor-plan.md) | `request-refactor-plan/` |
 | [requirement-course-correction](requirement-course-correction.md) | `requirement-course-correction/` |
 | [tdd](tdd.md) | `tdd/` |
+| [tech-lead-jira-tickets](tech-lead-jira-tickets.md) | `tech-lead-jira-tickets/` |
+| [tech-lead-unblock](tech-lead-unblock.md) | `tech-lead-unblock/` |
 | [triage-issue](triage-issue.md) | `triage-issue/` |
 | [ubiquitous-language](ubiquitous-language.md) | `ubiquitous-language/` |
 | [update-cursor-settings](update-cursor-settings.md) | `skills-cursor/update-cursor-settings/` |

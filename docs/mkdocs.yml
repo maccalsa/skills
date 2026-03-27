@@ -57,6 +57,8 @@ nav:
       - request-refactor-plan: skills/request-refactor-plan.md
       - requirement-course-correction: skills/requirement-course-correction.md
       - tdd: skills/tdd.md
+      - tech-lead-jira-tickets: skills/tech-lead-jira-tickets.md
+      - tech-lead-unblock: skills/tech-lead-unblock.md
       - triage-issue: skills/triage-issue.md
       - ubiquitous-language: skills/ubiquitous-language.md
       - update-cursor-settings: skills/update-cursor-settings.md
@@ -64,6 +66,7 @@ nav:
       - Calendar refresh (end-to-end): recipes/end-to-end-flow.md
   - Cookbook:
       - Quick examples: cookbook/quick-examples.md
+      - "Tech lead case study (PR tension)": cookbook/tech-lead-case-study.md
 
 plugins:
   - search

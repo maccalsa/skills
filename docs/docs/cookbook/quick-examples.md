@@ -96,6 +96,16 @@ Short, **copy-paste** patterns with real wording. Replace bracketed placeholders
 
 ---
 
+## 6. Tech lead: unblock without an “advice essay”
+
+**Goal:** Classify the situation, use the intervention ladder, and get **owners + success signals**—not a long list of problems without process.
+
+See the full **before/after** framing and copy-paste prompt in [Tech lead case study: PR discipline & peer tension](tech-lead-case-study.md).
+
+**Pairs with:** `tech-lead-jira-tickets` when agreed norms or spikes should become **tracked Jira** work.
+
+---
+
 ## Combining skills (cheat sheet)
 
 | Intent | Skills |
@@ -106,5 +116,6 @@ Short, **copy-paste** patterns with real wording. Replace bracketed placeholders
 | Repo map + next step | `inherited-codebase-onboarding` |
 | Architecture RFC | `improve-codebase-architecture` or `request-refactor-plan` |
 | Mid-flight scope change | `requirement-course-correction` |
+| Team friction, PR norms, mediating ICs | `tech-lead-unblock` → optionally `tech-lead-jira-tickets` |
 
 See the [Skills catalog](../skills/index.md) and each skill’s page for combinations and quickstarts.
