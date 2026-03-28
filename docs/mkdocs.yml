@@ -62,11 +62,14 @@ nav:
       - triage-issue: skills/triage-issue.md
       - ubiquitous-language: skills/ubiquitous-language.md
       - update-cursor-settings: skills/update-cursor-settings.md
+      - x-dotfiles-script: skills/x-dotfiles-script.md
   - Recipes:
       - Calendar refresh (end-to-end): recipes/end-to-end-flow.md
+      - "x-dotfiles-script": recipes/x-dotfiles-script.md
   - Cookbook:
       - Quick examples: cookbook/quick-examples.md
       - "Tech lead case study (PR tension)": cookbook/tech-lead-case-study.md
+      - x-dotfiles-script: cookbook/x-dotfiles-script.md
 
 plugins:
   - search

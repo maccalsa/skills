@@ -16,6 +16,7 @@ In Cursor, `@mention` the skill so the agent loads the project’s **`SKILL.md`*
 | **Neon Postgres** | [neon-postgres](neon-postgres.md), [neon-postgres-egress-optimizer](neon-postgres-egress-optimizer.md) |
 | **Tech lead & delivery** | [tech-lead-unblock](tech-lead-unblock.md), [tech-lead-jira-tickets](tech-lead-jira-tickets.md) |
 | **Cursor authoring** | [create-rule](create-rule.md), [create-skill](create-skill.md), [update-cursor-settings](update-cursor-settings.md), [migrate-to-skills](migrate-to-skills.md), [create-subagent](create-subagent.md) |
+| **Personal dotfiles (bash)** | [x-dotfiles-script](x-dotfiles-script.md) |
 
 ## All skills (A–Z)
 
@@ -46,3 +47,4 @@ In Cursor, `@mention` the skill so the agent loads the project’s **`SKILL.md`*
 | [triage-issue](triage-issue.md) | `triage-issue/` |
 | [ubiquitous-language](ubiquitous-language.md) | `ubiquitous-language/` |
 | [update-cursor-settings](update-cursor-settings.md) | `skills-cursor/update-cursor-settings/` |
+| [x-dotfiles-script](x-dotfiles-script.md) | `x-dotfiles-script/` |
