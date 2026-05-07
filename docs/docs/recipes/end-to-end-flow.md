@@ -129,14 +129,14 @@ Proposed phase themes (adjust after exploration):
 Quiz me on granularity; then write the file after I approve.
 ```
 
-### Option B — GitHub issues — `prd-to-issues`
+### Option B — GitHub issues — `to-issues`
 
 **Prereq:** Parent issue exists (e.g. epic **#100** with §0 + decisions).
 
 **Copy-paste:**
 
 ```text
-@prd-to-issues
+@to-issues
 
 Parent PRD/epic is issue #100 (calendar UX + recurrence + notifications). Break into vertical-slice child issues: prefer AFK; mark HITL only for product/security decisions. Show numbered breakdown with blockers; do not create until I approve; then create in dependency order.
 ```
@@ -224,7 +224,7 @@ Classify (bug vs spec vs requirement vs architecture), run impact checklist, pro
 | 2 | `ubiquitous-language` | Optional glossary |
 | 3 | `inherited-codebase-onboarding` | Map + numbered next steps |
 | 3b | `triage-issue` or `improve-codebase-architecture` | Only if bug or coupling blocks slices |
-| 4 | `prd-to-plan` **or** `prd-to-issues` | `./plans/calendar-refresh.md` or child issues |
+| 4 | `prd-to-plan` **or** `to-issues` | `./plans/calendar-refresh.md` or child issues |
 | 5 | `aligned-implementation` + `tdd` | One thread per phase (fast create → recurrence → notifications) |
 | — | `requirement-course-correction` | When requirements move mid-project |
 

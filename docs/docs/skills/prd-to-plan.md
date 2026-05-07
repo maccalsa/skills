@@ -16,7 +16,7 @@ Markdown plan: architectural decisions, then phases with “What to build” + a
 
 ## What it won’t do
 
-Create GitHub issues (use **prd-to-issues**); skip your approval on breakdown.
+Create tracker issues (use **to-issues**); skip your approval on breakdown.
 
 ## How to use it
 
@@ -31,7 +31,7 @@ Paste or point to PRD; answer granularity quiz; use Phase 0 with **greenfield-sc
 ## Combinations
 
 - **greenfield-scaffold** — Phase 0.
-- **prd-to-issues** — alternative artifact.
+- **to-issues** — alternative artifact.
 - **prd-critique** — sharpen PRD first.
 
 ## Quickstart

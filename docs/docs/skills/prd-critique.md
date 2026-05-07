@@ -31,7 +31,7 @@ Put draft at `./prd.md`; optional supporting files; run skill; read `prd-final.m
 ## Combinations
 
 - **prd-to-plan** — turns final PRD into phases.
-- **prd-to-issues** — if PRD lives as GitHub issue.
+- **to-issues** — if work should live as tracker issues (plan, spec, or PRD).
 - **grill-me** — live Q&A instead of file-based critique.
 
 ## Quickstart

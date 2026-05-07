@@ -24,7 +24,7 @@ Use an **`@mention`** in chat so the agent loads the right skill **before** writ
 flowchart LR
   A[New idea / PRD] --> B{Artifact?}
   B -->|Local plan| C[prd-to-plan]
-  B -->|GitHub issues| D[prd-to-issues]
+  B -->|GitHub issues| D[to-issues]
   A --> E[grill-me]
   F[Unfamiliar repo] --> G[inherited-codebase-onboarding]
   H[Bug] --> I[triage-issue]
@@ -32,7 +32,7 @@ flowchart LR
 ```
 
 - **Product clarity:** [grill-me](skills/grill-me.md), [prd-critique](skills/prd-critique.md)
-- **Plan or tickets:** [prd-to-plan](skills/prd-to-plan.md), [prd-to-issues](skills/prd-to-issues.md)
+- **Plan or tickets:** [prd-to-plan](skills/prd-to-plan.md), [to-issues](skills/to-issues.md)
 - **Orientation:** [inherited-codebase-onboarding](skills/inherited-codebase-onboarding.md)
 - **Shipping a slice:** [aligned-implementation](skills/aligned-implementation.md) + [tdd](skills/tdd.md)
 - **GitHub:** [issue-to-pr](skills/issue-to-pr.md) after your branch is ready

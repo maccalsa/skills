@@ -10,7 +10,7 @@ In Cursor, `@mention` the skill so the agent loads the project’s **`SKILL.md`*
 |------|--------|
 | **Ship with tests** | [aligned-implementation](aligned-implementation.md), [tdd](tdd.md), [requirement-course-correction](requirement-course-correction.md) |
 | **Explore & structure** | [inherited-codebase-onboarding](inherited-codebase-onboarding.md), [improve-codebase-architecture](improve-codebase-architecture.md), [design-an-interface](design-an-interface.md), [request-refactor-plan](request-refactor-plan.md) |
-| **Product & plans** | [grill-me](grill-me.md), [prd-critique](prd-critique.md), [prd-to-plan](prd-to-plan.md), [prd-to-issues](prd-to-issues.md), [ubiquitous-language](ubiquitous-language.md) |
+| **Product & plans** | [grill-me](grill-me.md), [prd-critique](prd-critique.md), [prd-to-plan](prd-to-plan.md), [to-issues](to-issues.md), [ubiquitous-language](ubiquitous-language.md) |
 | **Bugs** | [triage-issue](triage-issue.md) |
 | **Repo & GitHub** | [greenfield-scaffold](greenfield-scaffold.md), [issue-to-pr](issue-to-pr.md), [mirror-repo-github](mirror-repo-github.md) |
 | **Neon Postgres** | [neon-postgres](neon-postgres.md), [neon-postgres-egress-optimizer](neon-postgres-egress-optimizer.md) |
@@ -37,7 +37,7 @@ In Cursor, `@mention` the skill so the agent loads the project’s **`SKILL.md`*
 | [neon-postgres](neon-postgres.md) | `neon-postgres/` |
 | [neon-postgres-egress-optimizer](neon-postgres-egress-optimizer.md) | `neon-postgres-egress-optimizer/` |
 | [prd-critique](prd-critique.md) | `prd-critique/` |
-| [prd-to-issues](prd-to-issues.md) | `prd-to-issues/` |
+| [to-issues](to-issues.md) | `to-issues/` |
 | [prd-to-plan](prd-to-plan.md) | `prd-to-plan/` |
 | [request-refactor-plan](request-refactor-plan.md) | `request-refactor-plan/` |
 | [requirement-course-correction](requirement-course-correction.md) | `requirement-course-correction/` |

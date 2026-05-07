@@ -52,7 +52,7 @@ nav:
       - neon-postgres: skills/neon-postgres.md
       - neon-postgres-egress-optimizer: skills/neon-postgres-egress-optimizer.md
       - prd-critique: skills/prd-critique.md
-      - prd-to-issues: skills/prd-to-issues.md
+      - to-issues: skills/to-issues.md
       - prd-to-plan: skills/prd-to-plan.md
       - request-refactor-plan: skills/request-refactor-plan.md
       - requirement-course-correction: skills/requirement-course-correction.md

@@ -112,7 +112,7 @@ See the full **before/after** framing and copy-paste prompt in [Tech lead case s
 |--------|--------|
 | Narrow scope + test-first | `aligned-implementation` + `tdd` |
 | Sharpen PRD before planning | `prd-critique` → `prd-to-plan` |
-| GitHub issues instead of local plan | `prd-to-issues` |
+| GitHub issues instead of local plan | `to-issues` |
 | Repo map + next step | `inherited-codebase-onboarding` |
 | Architecture RFC | `improve-codebase-architecture` or `request-refactor-plan` |
 | Mid-flight scope change | `requirement-course-correction` |

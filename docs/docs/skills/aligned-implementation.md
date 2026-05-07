@@ -31,7 +31,7 @@ Replace deep TDD or architecture skills; it orchestrates. Not for one-line fixes
 ## Combinations
 
 - **tdd** — mechanics of red-green-refactor.
-- **prd-to-plan** or **prd-to-issues** — anchors for scope.
+- **prd-to-plan** or **to-issues** — anchors for scope.
 - **improve-codebase-architecture** — only for Phase 3 when coupling blocks the slice.
 
 ## Quickstart
