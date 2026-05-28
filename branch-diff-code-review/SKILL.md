@@ -1,96 +1,96 @@
 ---
 name: branch-diff-code-review
-description: Reviews the current branch against its parent branch and writes attachable, human-sounding code review comments. Use when the user asks to review a branch, PR, or current changes against main/master/base, especially when they want concise markdown comments with file paths and line numbers.
+description: Reviews a branch or PR diff against its base and writes concise, attachable, human-sounding code review comments. Use when the user asks to review a branch, PR, current changes, or a diff against main/master/base, especially when they want markdown comments with file paths, line numbers, risks, bugs, missing tests, or reviewer-ready feedback.
 ---
 
 # Branch Diff Code Review
 
 ## Quick start
 
-Compare the current branch with its parent branch, review only what changed, then write a short markdown review with comments that can be attached to the changed lines.
+Review only the changed behaviour between a branch and its base, then write reviewer-ready markdown comments anchored to current-branch line numbers.
 
-Default style:
+Default output:
 
-- Warm opening.
-- Direct, practical, human wording.
-- Question-led comments: "Does that mean...?", "Do we need...?", "Is this correct...?", "Are we missing...?"
-- No AI polish, no generic praise, no long summaries.
-- No more than 5 comments unless the user asks for a different limit.
+- Up to **5 findings** unless the user requests a different limit.
+- Findings first, ordered by severity.
+- Each finding has a file path, line or range, short title, the concern, and a concrete question or suggested fix.
+- If there are no material findings, say so plainly and mention residual risk or test gaps.
 
 ## Workflow
 
-1. Find the base branch.
-   - Prefer the user-specified parent branch.
-   - Otherwise use the merge base with `main`, `master`, or the branch's tracked PR base.
-   - If the base is genuinely unclear, ask one short question.
+1. Establish the review scope.
+   - Prefer a user-specified base (`main`, `master`, `origin/main`, PR base, or SHA).
+   - If reviewing a GitHub PR/URL, use `gh` to identify the base and changed files.
+   - Otherwise infer the base from the tracked branch, `origin/main`, then `origin/master`.
+   - If the base is genuinely ambiguous, ask one short question before reviewing.
 
-2. Compare the branch.
+2. Gather evidence.
    - Check branch state: `git status --short --branch`.
-   - List changed files: `git diff --name-status <base>...HEAD`.
-   - Inspect the diff: `git diff --unified=80 <base>...HEAD`.
-   - For large diffs, split by area and use read-only subagents or targeted file reads.
+   - Get commits: `git log --oneline --decorate <base>..HEAD`.
+   - List files: `git diff --name-status <base>...HEAD`.
+   - Inspect diff: `git diff --unified=80 <base>...HEAD`.
+   - For large diffs, split by package or feature area; use targeted file reads for changed files.
 
-3. Review for current issues only.
-   - Focus on behaviour that changed from the parent branch.
-   - Look for real bugs, broken tests, contract changes, missing coverage for new behaviour, security risks, and confusing implementation choices.
-   - Do not leave speculative "maybe someday" comments.
-   - Do not comment on untouched code unless the branch changed how that code behaves.
+3. Review changed behaviour, not the whole codebase.
+   - Prioritise correctness bugs, behavioural regressions, broken contracts, data loss, security/privacy issues, concurrency hazards, observability gaps, and missing tests for new behaviour.
+   - Comment on style/naming only when it blocks understanding or review.
+   - Do not comment on untouched code unless the diff changes how that code behaves.
+   - Avoid speculative “future improvement” comments. Make every finding actionable now.
 
 4. Get attachable line references.
    - Read the changed files on the current branch with `ReadFile` so line numbers match the reviewer's view.
    - Anchor each comment to the smallest relevant line or range.
-   - Prefer lines added or edited in the branch. If the issue is caused by interaction across files, cite the most direct changed line first and mention the related file in the comment.
-   - Use this format in markdown:
-
-```md
-### 1. Short comment title
-
-`path/to/File.kt:42`
-
-Does that mean ...?
-
-Why I'm asking: ...
-```
+   - Prefer added/edited lines. If the problem spans files, anchor to the changed line that introduced the behaviour and mention related files in prose.
+   - Use `path/to/File.kt:42` or `path/to/File.kt:42-48`.
 
 5. Write the review.
-   - Start with a warm one- or two-sentence opener.
-   - Keep each comment short: location, question, current issue, suggested clarification or fix.
-   - Use the user's requested output location. If they only ask for "a markdown file", create a clearly named file in the repo root.
-   - Respect the requested comment limit.
+   - Lead with findings. Keep summary secondary.
+   - Use direct, practical wording; question-led phrasing is good when intent is unclear.
+   - Explain the observed risk and the likely fix in 2-5 sentences per finding.
+   - Save to the requested path if the user asks for a file; otherwise respond in chat.
 
-## Comment Shape
-
-Use this pattern:
+## Comment Format
 
 ```md
 ## Review Comments
 
-Nice work getting this through. I had a few questions where the branch seems to change behaviour from `<base>`.
+### 1. Short Finding Title
 
-### 1. Detail response on partial upstream success
+`path/to/File.kt:42`
 
-`query/src/main/.../CaseQueryService.kt:90`
+Does this path need to handle `<condition>` as well?
 
-Does that mean `GET /cases/{crn}` should now return only `crn` when this upstream value is missing?
+Why I'm asking: this branch now sends `<new value>` into `<consumer>`, but `<consumer>` still treats it as `<old assumption>`. That looks like it could `<specific failure>`. Should this guard/map/test be updated here?
+```
 
-Why I'm asking: on `<base>`, the response still used the successful upstream calls to populate the rest of the DTO. This branch currently drops that data at this line. Is that intended, or should the new status only describe the missing part?
+If no findings:
+
+```md
+## Review Comments
+gonig ti pop 
+No material findings from the diff against `<base>`.
+
+Residual risk: `<brief test gap or area not run>`.
 ```
 
 ## Tone Rules
 
-- Prefer questions over commands.
-- Be clear about the current issue in the diff.
-- Avoid grand claims like "this will break production" unless the evidence proves it.
-- Avoid filler like "great work overall" or "just a small nit".
-- If a comment is only style or naming, say so briefly.
-- If there are no strong findings, say that plainly and list any remaining coverage gaps.
-- if unsure refer to skill /write-like-me
+- Sound like a human teammate, not an audit report.
+- Prefer “Does this mean…?”, “Do we need…?”, “Is this still true…?” when intent is uncertain.
+- Be precise about evidence from the diff. Do not overstate impact.
+- Avoid generic praise, “nit”, “LGTM except”, and AI-polished symmetry.
+- If unsure about phrasing, use the `write-like-me` skill.
 
-## Output Checklist
+## Review Checklist
 
-- [ ] Uses the correct base branch.
-- [ ] Only comments on changed behaviour or changed tests.
-- [ ] Has no more comments than requested.
-- [ ] Every comment has a file path and line number.
-- [ ] Comments sound like a human reviewer, not an audit report.
-- [ ] The opening is warm but not overdone.
+- [ ] Correct base branch or PR base used.
+- [ ] Only changed behaviour or changed tests are reviewed.
+- [ ] Findings are ordered by severity.
+- [ ] Every finding has an attachable file path and line number/range.
+- [ ] Each comment includes why it matters and what would resolve it.
+- [ ] No more findings than requested.
+- [ ] No speculative cleanup or broad architecture critique unless requested.
+
+## File Output
+
+When the user asks for a markdown file, create `branch-diff-review.md` in the repo root unless they provide a path. Include base/head refs, commit list, review comments, and commands/tests run.
