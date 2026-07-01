@@ -1,39 +1,27 @@
 # mirror-repo-github
 
-**Skill package:** `mirror-repo-github/`
-
-## What it does
-
-Removes old `origin`, creates a **new private** GitHub repo with `gh`, wires `origin`, pushes—so automation (e.g. issue-to-pr) has a home.
-
-## Input
-
-Target `owner/repo` (or repo name + `gh` user as owner); branch to push (default rules around `main`/`master`); never public unless you change outside this skill.
-
-## Output
-
-`origin` → new URL; branch pushed; optional verification.
-
-## What it won’t do
-
-Create public repos in this workflow; force-push without explicit ask; remove other remotes unless you ask.
-
-## How to use it
-
-`gh auth login`; run from repo root. Prefer `gh repo create owner/name --private --source=. --remote=origin --push` when suitable.
-
-## Examples
-
-1. “Mirror this clone to `acme/widget-api` private.”
-2. “Detach old origin; I need a fresh repo for gh workflows.”
-3. Large history: expect push to take time.
-
-## Combinations
-
-- **issue-to-pr** — needs `origin` you control.
+Detaches a local git repository from its current remote, creates a new private GitHub repository with gh, attaches it as origin, sets upstream, and pushes the default branch. Use when mirroring or rehoming a repo to a new GitHub remote, copying a codebase to a fresh repo, or preparing a local clone for issue-to-PR and other gh-automation workflows that expect a writable origin.
 
 ## Quickstart
 
-```text
-@mirror-repo-github — New private repo `myuser/experiment`. Push current branch.
+Install this skill with the repository installer:
+
+```bash
+npx skills@latest add maccalsa/skills --skill=mirror-repo-github
 ```
+
+For a local checkout, run the maintainer linker from the repository root:
+
+```bash
+./scripts/link-skills.sh
+```
+
+## Source
+
+- [`SKILL.md`](https://github.com/maccalsa/skills/blob/main/skills/engineering/mirror-repo-github/SKILL.md)
+- Bucket: `engineering`
+
+## When to reach for it
+
+Use this skill when the task matches the description above. User-invoked skills should be called directly by name; model-invoked skills can also be loaded automatically by agents that support skill descriptions.
+

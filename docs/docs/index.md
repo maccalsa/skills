@@ -1,28 +1,19 @@
-# Cursor Agent Skills
+# Maccalsa Skills
 
-This site is the **canonical documentation** for agent skills published from the `docs/` tree: catalog pages, per-skill reference, recipes, and a short cookbook.
+AI-agnostic agent skills for engineering, planning, debugging, writing, and repo operations.
 
-In Cursor, `@mention` a skill so the agent loads the project’s **`SKILL.md`** implementation (often colocated with this repo under `skills/<name>/` or `skills-cursor/<name>/`).
+This repo keeps the small composable style from Matt Pocock's skills repository, adds local skills for Neon, dotfiles, GitHub repo operations, and writing style, and keeps a MkDocs site for human-facing documentation.
 
-## What you will find
-
-| Section | Purpose |
-|--------|---------|
-| [Getting started](getting-started.md) | Invoke skills, `@mention` patterns, workflow diagram |
-| [Skills → Catalog](skills/index.md) | Grouped index + links to **one page per skill** |
-| [Recipe: calendar refresh](recipes/end-to-end-flow.md) | Long-form, copy-paste multi-thread flow |
-| [Cookbook](cookbook/quick-examples.md) | Short prompts (API slice, triage, Neon, PR, etc.) |
-
-## Deployed docs
-
-Built with [MkDocs](https://www.mkdocs.org/) and [Material](https://squidfunk.github.io/mkdocs-material/). Pushes to `main` that touch `docs/` or `.github/workflows/docs.yml` deploy to **GitHub Pages**.
-
-## Local preview
+## Start here
 
 ```bash
-cd docs
-python -m pip install -r requirements.txt
-mkdocs serve
+npx skills@latest add maccalsa/skills
 ```
 
-Open the URL shown in the terminal (often `http://127.0.0.1:8000`).
+Then run `/setup-agent-skills` once in any repository that will use issue, triage, PRD, or domain-documentation workflows.
+
+## Browse
+
+- [Getting started](getting-started.md)
+- [Skills catalog](skills/index.md)
+- [End-to-end flow](recipes/end-to-end-flow.md)

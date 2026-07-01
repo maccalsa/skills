@@ -1,47 +1,27 @@
 # x-dotfiles-script
 
-**Skill package:** `x-dotfiles-script/`
-
-## What it does
-
-Authors or migrates **bash** tools for a personal **x_** dotfiles toolset: naming (`x_<name>`), layout under `stow/scripts/.local/bin/`, `_x_manifest` registration, `chmod`, and optional **GNU stow** into `~/.local/bin`.
-
-## Input
-
-A prompt for a new tool, a pasted script to migrate, or a request to make an existing script install-ready.
-
-## Output
-
-Executable `x_*` scripts, manifest lines, stow/PATH instructions, and (when asked) the exact `stow` command—per rules in the repo’s [`SKILL.md`](https://github.com/maccalsa/skills/blob/main/x-dotfiles-script/SKILL.md) (agent-focused).
-
-## What it won’t do
-
-Place tools under `~/.cursor/skills-cursor/`; drive-by refactors of unrelated scripts; stow into `$HOME` without confirmation when you only asked for file contents.
-
-## How to use it
-
-1. **`@x-dotfiles-script`** in Cursor so the agent loads `SKILL.md`.
-2. For **procedures** (new tool, migrate, stow, sidecars), use the [Cookbook](../cookbook/x-dotfiles-script.md).
-3. For **copy-paste prompts**, use [Recipes](../recipes/x-dotfiles-script.md).
-4. For **worked examples** and troubleshooting, see [`examples.md`](https://github.com/maccalsa/skills/blob/main/x-dotfiles-script/examples.md) in the skill package (kept next to `SKILL.md` for the agent).
+Authors or migrates bash tools for the personal dotfiles x_ toolset—naming, layout under stow/scripts, _x_manifest registration, chmod, and optional stow into ~/.local/bin. Human docs and copy-paste prompts live in the repo MkDocs site (docs/docs/skills, cookbook, recipes). Use when the user wants a new x_ script from a prompt, to convert an existing script to x_ style, or to make a script install-ready with stow; when mentioning x_ tools, dotfiles scripts package, or ~/.local/bin PATH.
 
 ## Quickstart
 
-```text
-@x-dotfiles-script
+Install this skill with the repository installer:
 
-New x_ script: [one-line purpose]. Bash. Dotfiles root: $HOME/_dotfiles (or specify).
+```bash
+npx skills@latest add maccalsa/skills --skill=x-dotfiles-script
 ```
 
-## Combinations
+For a local checkout, run the maintainer linker from the repository root:
 
-- **create-skill** — if you are evolving this skill’s structure or packaging.
+```bash
+./scripts/link-skills.sh
+```
 
-## Full documentation (this site)
+## Source
 
-| Page | Contents |
-|------|----------|
-| [Cookbook: x-dotfiles-script](../cookbook/x-dotfiles-script.md) | Step-by-step: new tool, migrate, install-ready, stow/PATH, sidecars, manifest |
-| [Recipes: x-dotfiles-script](../recipes/x-dotfiles-script.md) | Copy-paste message templates |
+- [`SKILL.md`](https://github.com/maccalsa/skills/blob/main/skills/engineering/x-dotfiles-script/SKILL.md)
+- Bucket: `engineering`
 
-**Agent rules (not duplicated on the site):** [`x-dotfiles-script/SKILL.md`](https://github.com/maccalsa/skills/blob/main/x-dotfiles-script/SKILL.md) in the repository.
+## When to reach for it
+
+Use this skill when the task matches the description above. User-invoked skills should be called directly by name; model-invoked skills can also be loaded automatically by agents that support skill descriptions.
+

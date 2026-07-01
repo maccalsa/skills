@@ -1,40 +1,27 @@
 # neon-postgres
 
-**Skill package:** `neon-postgres/`
-
-## What it does
-
-Routes Neon Serverless Postgres questions to **current** docs and patterns: connect, branching, auth, Neon JS, CLI, APIs, pooling, etc.
-
-## Input
-
-Concrete question or task (drivers, serverless, auth, branching, cost, etc.).
-
-## Output
-
-Answers grounded in Neon docs (links to `neon.com` + `llms.txt` index); not a substitute for your connection string or org policy.
-
-## What it won’t do
-
-Invent API details—the skill says verify against docs; training data may be stale.
-
-## How to use it
-
-`@mention` for Neon-specific work; ask the agent to fetch doc pages (`.md` URLs or `Accept: text/markdown`) when precision matters.
-
-## Examples
-
-1. “Pooled vs direct host for serverless?”
-2. “Branch for preview deploys?”
-3. “Neon Auth vs Neon JS for my Next app?”
-
-## Combinations
-
-- **neon-postgres-egress-optimizer** — cost/transfer.
-- MCP Neon tools in Cursor — live SQL/projects when configured.
+Guides and best practices for working with Neon Serverless Postgres. Covers getting started, local development with Neon, choosing a connection method, Neon features, authentication (@neondatabase/auth), PostgREST-style data API (@neondatabase/neon-js), Neon CLI, and Neon's Platform API/SDKs. Use for any Neon-related questions.
 
 ## Quickstart
 
-```text
-@neon-postgres — Edge runtime: recommended connection method and pooling hostname pattern?
+Install this skill with the repository installer:
+
+```bash
+npx skills@latest add maccalsa/skills --skill=neon-postgres
 ```
+
+For a local checkout, run the maintainer linker from the repository root:
+
+```bash
+./scripts/link-skills.sh
+```
+
+## Source
+
+- [`SKILL.md`](https://github.com/maccalsa/skills/blob/main/skills/engineering/neon-postgres/SKILL.md)
+- Bucket: `engineering`
+
+## When to reach for it
+
+Use this skill when the task matches the description above. User-invoked skills should be called directly by name; model-invoked skills can also be loaded automatically by agents that support skill descriptions.
+

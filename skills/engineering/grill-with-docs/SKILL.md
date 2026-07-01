@@ -1,0 +1,14 @@
+---
+name: grill-with-docs
+description: A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
+disable-model-invocation: true
+---
+
+Run a `/grilling` session, using the `/domain-modeling` skill.
+
+## Local refinements
+
+The original local templates remain available for projects that already used them:
+
+- [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md)
+- [ADR-FORMAT.md](./ADR-FORMAT.md)

@@ -1,50 +1,44 @@
 # Skills catalog
 
-These pages are the **canonical documentation** for this site: one page per skill with purpose, inputs, limits, and copy-paste quickstarts.
+Active skills are grouped the same way they are stored in the repo. Deprecated and in-progress skills are kept in the source tree but intentionally excluded from this catalog.
 
-In Cursor, `@mention` the skill so the agent loads the project’s **`SKILL.md`** (often under `skills/<name>/` or `skills-cursor/<name>/` alongside this repo).
+## Engineering
 
-## By workflow
+- [ask-skills](ask-skills.md) - Ask which skill or flow fits your situation. A router over the skills in this repo.
+- [branch-diff-code-review](branch-diff-code-review.md) - Reviews a branch or PR diff against its base and writes concise, attachable, human-sounding code review comments. Use when the user asks to review a branch, PR, current changes, or a diff against main/master/base, especially when they want markdown comments with file paths, line numbers, risks, bugs, missing tests, or reviewer-ready feedback.
+- [code-review](code-review.md) - Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes — Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/PRD asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to "review since X".
+- [codebase-design](codebase-design.md) - Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.
+- [diagnosing-bugs](diagnosing-bugs.md) - Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
+- [domain-modeling](domain-modeling.md) - Build and sharpen a project's domain model. Use when the user wants to pin down domain terminology or a ubiquitous language, record an architectural decision, or when another skill needs to maintain the domain model.
+- [git-recent-commits-report](git-recent-commits-report.md) - Builds a Markdown report from the last N commits at HEAD — shortlog, a prose summary that infers intent and purpose, and an appended unified diff. Use when the user asks for a changelog-style write-up, recent-commit summary, narrative of last N commits, purpose of changes, or a combined diff report in .md format.
+- [grill-with-docs](grill-with-docs.md) - A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
+- [implement](implement.md) - Implement a piece of work based on a PRD or set of issues.
+- [improve-codebase-architecture](improve-codebase-architecture.md) - Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
+- [karpathy-guidelines](karpathy-guidelines.md) - Behavioral guidelines to reduce common LLM coding mistakes. Use when writing, reviewing, or refactoring code to avoid overcomplication, make surgical changes, surface assumptions, and define verifiable success criteria.
+- [mirror-repo-github](mirror-repo-github.md) - Detaches a local git repository from its current remote, creates a new private GitHub repository with gh, attaches it as origin, sets upstream, and pushes the default branch. Use when mirroring or rehoming a repo to a new GitHub remote, copying a codebase to a fresh repo, or preparing a local clone for issue-to-PR and other gh-automation workflows that expect a writable origin.
+- [neon-postgres](neon-postgres.md) - Guides and best practices for working with Neon Serverless Postgres. Covers getting started, local development with Neon, choosing a connection method, Neon features, authentication (@neondatabase/auth), PostgREST-style data API (@neondatabase/neon-js), Neon CLI, and Neon's Platform API/SDKs. Use for any Neon-related questions.
+- [neon-postgres-egress-optimizer](neon-postgres-egress-optimizer.md) - Diagnose and fix excessive Postgres egress (network data transfer) in a codebase. Use when a user mentions high database bills, unexpected data transfer costs, network transfer charges, egress spikes, "why is my Neon bill so high", "database costs jumped", SELECT * optimization, query overfetching, reduce Neon costs, optimize database usage, or wants to reduce data sent from their database to their application. Also use when reviewing query patterns for cost efficiency, even if the user doesn't explicitly mention egress or data transfer.
+- [prototype](prototype.md) - Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
+- [resolving-merge-conflicts](resolving-merge-conflicts.md) - Use when you need to resolve an in-progress git merge/rebase conflict.
+- [setup-agent-skills](setup-agent-skills.md) - Configure a repository for these engineering skills by recording its issue tracker, triage label vocabulary, and domain documentation layout. Run once before first use of the issue and architecture workflows.
+- [tdd](tdd.md) - Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
+- [to-issues](to-issues.md) - Break a plan, spec, or PRD into independently-grabbable issues on the project issue tracker using tracer-bullet vertical slices.
+- [to-prd](to-prd.md) - Turn the current conversation into a PRD and publish it to the project issue tracker — no interview, just synthesis of what you've already discussed.
+- [triage](triage.md) - Move issues and external PRs through a state machine of triage roles — categorise, verify, grill if needed, and write agent-ready briefs.
+- [x-dotfiles-script](x-dotfiles-script.md) - Authors or migrates bash tools for the personal dotfiles x_ toolset—naming, layout under stow/scripts, _x_manifest registration, chmod, and optional stow into ~/.local/bin. Human docs and copy-paste prompts live in the repo MkDocs site (docs/docs/skills, cookbook, recipes). Use when the user wants a new x_ script from a prompt, to convert an existing script to x_ style, or to make a script install-ready with stow; when mentioning x_ tools, dotfiles scripts package, or ~/.local/bin PATH.
 
-| Area | Skills |
-|------|--------|
-| **Ship with tests** | [aligned-implementation](aligned-implementation.md), [tdd](tdd.md), [requirement-course-correction](requirement-course-correction.md) |
-| **Explore & structure** | [inherited-codebase-onboarding](inherited-codebase-onboarding.md), [improve-codebase-architecture](improve-codebase-architecture.md), [design-an-interface](design-an-interface.md), [request-refactor-plan](request-refactor-plan.md) |
-| **Product & plans** | [grill-me](grill-me.md), [prd-critique](prd-critique.md), [prd-to-plan](prd-to-plan.md), [to-issues](to-issues.md), [ubiquitous-language](ubiquitous-language.md) |
-| **Bugs** | [triage-issue](triage-issue.md) |
-| **Repo & GitHub** | [greenfield-scaffold](greenfield-scaffold.md), [issue-to-pr](issue-to-pr.md), [mirror-repo-github](mirror-repo-github.md) |
-| **Neon Postgres** | [neon-postgres](neon-postgres.md), [neon-postgres-egress-optimizer](neon-postgres-egress-optimizer.md) |
-| **Tech lead & delivery** | [tech-lead-unblock](tech-lead-unblock.md), [tech-lead-jira-tickets](tech-lead-jira-tickets.md) |
-| **Cursor authoring** | [create-rule](create-rule.md), [create-skill](create-skill.md), [update-cursor-settings](update-cursor-settings.md), [migrate-to-skills](migrate-to-skills.md), [create-subagent](create-subagent.md) |
-| **Personal dotfiles (bash)** | [x-dotfiles-script](x-dotfiles-script.md) |
+## Productivity
 
-## All skills (A–Z)
+- [caveman](caveman.md) - Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says "caveman mode", "talk like caveman", "use caveman", "less tokens", "be brief", or invokes /caveman.
+- [frontend-design](frontend-design.md) - Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.
+- [grill-me](grill-me.md) - A relentless interview to sharpen a plan or design.
+- [grilling](grilling.md) - Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.
+- [handoff](handoff.md) - Compact the current conversation into a handoff document for another agent to pick up.
+- [write-a-skill](write-a-skill.md) - Create new agent skills with proper structure, progressive disclosure, and bundled resources. Use when user wants to create, write, or build a new skill.
+- [write-like-me](write-like-me.md) - Rewrites text to sound direct, practical, and human by removing AI polish, corporate phrasing, over-explaining, empty balance, and unnatural symmetry—without faking typos or inventing facts. Use when the user says sound less AI, un-AI this, write like me, more natural, sound human, less corporate, rewrite in my style, or like something I would send.
+- [writing-great-skills](writing-great-skills.md) - Reference for writing and editing skills well — the vocabulary and principles that make a skill predictable.
+- [zoom-out](zoom-out.md) - Tell the agent to zoom out and give broader context or a higher-level perspective. Use when you're unfamiliar with a section of code or need to understand how it fits into the bigger picture.
 
-| Skill | Package path |
-|-------|----------------|
-| [aligned-implementation](aligned-implementation.md) | `aligned-implementation/` |
-| [create-rule](create-rule.md) | `skills-cursor/create-rule/` |
-| [create-skill](create-skill.md) | `skills-cursor/create-skill/` |
-| [create-subagent](create-subagent.md) | `skills-cursor/create-subagent/` |
-| [design-an-interface](design-an-interface.md) | `design-an-interface/` |
-| [greenfield-scaffold](greenfield-scaffold.md) | `greenfield-scaffold/` |
-| [grill-me](grill-me.md) | `grill-me/` |
-| [improve-codebase-architecture](improve-codebase-architecture.md) | `improve-codebase-architecture/` |
-| [inherited-codebase-onboarding](inherited-codebase-onboarding.md) | `inherited-codebase-onboarding/` |
-| [issue-to-pr](issue-to-pr.md) | `issue-to-pr/` |
-| [migrate-to-skills](migrate-to-skills.md) | `skills-cursor/migrate-to-skills/` |
-| [mirror-repo-github](mirror-repo-github.md) | `mirror-repo-github/` |
-| [neon-postgres](neon-postgres.md) | `neon-postgres/` |
-| [neon-postgres-egress-optimizer](neon-postgres-egress-optimizer.md) | `neon-postgres-egress-optimizer/` |
-| [prd-critique](prd-critique.md) | `prd-critique/` |
-| [to-issues](to-issues.md) | `to-issues/` |
-| [prd-to-plan](prd-to-plan.md) | `prd-to-plan/` |
-| [request-refactor-plan](request-refactor-plan.md) | `request-refactor-plan/` |
-| [requirement-course-correction](requirement-course-correction.md) | `requirement-course-correction/` |
-| [tdd](tdd.md) | `tdd/` |
-| [tech-lead-jira-tickets](tech-lead-jira-tickets.md) | `tech-lead-jira-tickets/` |
-| [tech-lead-unblock](tech-lead-unblock.md) | `tech-lead-unblock/` |
-| [triage-issue](triage-issue.md) | `triage-issue/` |
-| [ubiquitous-language](ubiquitous-language.md) | `ubiquitous-language/` |
-| [update-cursor-settings](update-cursor-settings.md) | `skills-cursor/update-cursor-settings/` |
-| [x-dotfiles-script](x-dotfiles-script.md) | `x-dotfiles-script/` |
+## Personal
+
+- [edit-article](edit-article.md) - Edit and improve articles by restructuring sections, improving clarity, and tightening prose. Use when user wants to edit, revise, or improve an article draft.

@@ -1,5 +1,5 @@
-site_name: Cursor Agent Skills
-site_description: Reference and recipes for agent skills—aligned implementation, TDD, PRD workflows, Neon, and more.
+site_name: Maccalsa Agent Skills
+site_description: AI-agnostic agent skills with MkDocs documentation.
 site_url: https://maccalsa.github.io/skills/
 repo_url: https://github.com/maccalsa/skills
 edit_uri: edit/main/docs/docs/
@@ -37,38 +37,44 @@ nav:
   - Getting started: getting-started.md
   - Skills:
       - Catalog: skills/index.md
-      - aligned-implementation: skills/aligned-implementation.md
-      - create-rule: skills/create-rule.md
-      - create-skill: skills/create-skill.md
-      - create-subagent: skills/create-subagent.md
-      - design-an-interface: skills/design-an-interface.md
-      - greenfield-scaffold: skills/greenfield-scaffold.md
-      - grill-me: skills/grill-me.md
+      - ask-skills: skills/ask-skills.md
+      - branch-diff-code-review: skills/branch-diff-code-review.md
+      - code-review: skills/code-review.md
+      - codebase-design: skills/codebase-design.md
+      - diagnosing-bugs: skills/diagnosing-bugs.md
+      - domain-modeling: skills/domain-modeling.md
+      - git-recent-commits-report: skills/git-recent-commits-report.md
+      - grill-with-docs: skills/grill-with-docs.md
+      - implement: skills/implement.md
       - improve-codebase-architecture: skills/improve-codebase-architecture.md
-      - inherited-codebase-onboarding: skills/inherited-codebase-onboarding.md
-      - issue-to-pr: skills/issue-to-pr.md
-      - migrate-to-skills: skills/migrate-to-skills.md
+      - karpathy-guidelines: skills/karpathy-guidelines.md
       - mirror-repo-github: skills/mirror-repo-github.md
       - neon-postgres: skills/neon-postgres.md
       - neon-postgres-egress-optimizer: skills/neon-postgres-egress-optimizer.md
-      - prd-critique: skills/prd-critique.md
-      - to-issues: skills/to-issues.md
-      - prd-to-plan: skills/prd-to-plan.md
-      - request-refactor-plan: skills/request-refactor-plan.md
-      - requirement-course-correction: skills/requirement-course-correction.md
+      - prototype: skills/prototype.md
+      - resolving-merge-conflicts: skills/resolving-merge-conflicts.md
+      - setup-agent-skills: skills/setup-agent-skills.md
       - tdd: skills/tdd.md
-      - tech-lead-jira-tickets: skills/tech-lead-jira-tickets.md
-      - tech-lead-unblock: skills/tech-lead-unblock.md
-      - triage-issue: skills/triage-issue.md
-      - ubiquitous-language: skills/ubiquitous-language.md
-      - update-cursor-settings: skills/update-cursor-settings.md
+      - to-issues: skills/to-issues.md
+      - to-prd: skills/to-prd.md
+      - triage: skills/triage.md
       - x-dotfiles-script: skills/x-dotfiles-script.md
+      - edit-article: skills/edit-article.md
+      - caveman: skills/caveman.md
+      - frontend-design: skills/frontend-design.md
+      - grill-me: skills/grill-me.md
+      - grilling: skills/grilling.md
+      - handoff: skills/handoff.md
+      - write-a-skill: skills/write-a-skill.md
+      - write-like-me: skills/write-like-me.md
+      - writing-great-skills: skills/writing-great-skills.md
+      - zoom-out: skills/zoom-out.md
   - Recipes:
-      - Calendar refresh (end-to-end): recipes/end-to-end-flow.md
-      - "x-dotfiles-script": recipes/x-dotfiles-script.md
+      - End-to-end flow: recipes/end-to-end-flow.md
+      - x-dotfiles-script: recipes/x-dotfiles-script.md
   - Cookbook:
       - Quick examples: cookbook/quick-examples.md
-      - "Tech lead case study (PR tension)": cookbook/tech-lead-case-study.md
+      - Review tension case study: cookbook/tech-lead-case-study.md
       - x-dotfiles-script: cookbook/x-dotfiles-script.md
 
 plugins:
@@ -77,7 +83,6 @@ plugins:
 markdown_extensions:
   - admonition
   - pymdownx.details
-  # Mermaid diagrams: Material loads Mermaid.js; no extra pip package needed
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
