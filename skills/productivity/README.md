@@ -6,7 +6,11 @@ Conversation, writing, continuity, and skill-authoring workflows.
 
 - `grill-me`
 - `handoff`
+- `teach`
 - `writing-great-skills`
+- `writing-fragments`
+- `writing-beats`
+- `writing-shape`
 
 ## Model-invoked
 
