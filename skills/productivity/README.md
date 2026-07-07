@@ -15,6 +15,7 @@ Conversation, writing, continuity, and skill-authoring workflows.
 ## Model-invoked
 
 - `caveman`
+- `fable-orchestration`
 - `frontend-design`
 - `grilling`
 - `write-a-skill`

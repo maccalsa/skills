@@ -61,6 +61,7 @@ nav:
       - x-dotfiles-script: skills/x-dotfiles-script.md
       - edit-article: skills/edit-article.md
       - caveman: skills/caveman.md
+      - fable-orchestration: skills/fable-orchestration.md
       - frontend-design: skills/frontend-design.md
       - grill-me: skills/grill-me.md
       - grilling: skills/grilling.md

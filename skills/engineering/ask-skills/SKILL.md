@@ -38,6 +38,7 @@ Use this when you do not remember which skill fits. It routes the situation to a
 - **`/writing-fragments`**, **`/writing-beats`**, and **`/writing-shape`** support explore-then-shape writing workflows.
 - **`/write-like-me`** rewrites text in the user's direct style.
 - **`/caveman`** compresses responses when token budget matters.
+- **`/fable-orchestration`** wires Fable as architect with ChatGPT as the execution worker (advisor mode, delegate patterns, effort routing).
 - **`/writing-great-skills`** reviews skill quality; **`/write-a-skill`** scaffolds new skills.
 
 ## Precondition

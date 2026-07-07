@@ -30,6 +30,7 @@ Active skills are grouped the same way they are stored in the repo. Deprecated a
 ## Productivity
 
 - [caveman](caveman.md) - Ultra-compressed communication mode. Cuts token usage ~75% by dropping filler, articles, and pleasantries while keeping full technical accuracy. Use when user says "caveman mode", "talk like caveman", "use caveman", "less tokens", "be brief", or invokes /caveman.
+- [fable-orchestration](fable-orchestration.md) - How to prompt Claude Fable 5 so it ORCHESTRATES a build correctly and cheaply — Fable as the architect/advisor that plans and delegates while ChatGPT does the token-heavy execution. Use whenever setting up or prompting a Fable-driven pipeline, or when someone says "prompt Fable," "Fable orchestration," "advisor mode," or "make Fable delegate."
 - [frontend-design](frontend-design.md) - Guidance for distinctive, intentional visual design when building new UI or reshaping an existing one. Helps with aesthetic direction, typography, and making choices that don't read as templated defaults.
 - [grill-me](grill-me.md) - A relentless interview to sharpen a plan or design.
 - [grilling](grilling.md) - Interview the user relentlessly about a plan or design. Use when the user wants to stress-test a plan before building, or uses any 'grill' trigger phrases.
