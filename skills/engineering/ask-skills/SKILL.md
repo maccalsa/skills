@@ -53,6 +53,8 @@ A starting situation that generates work, then merges onto the main flow.
 
 - **Third-party setup or one-off manual workflows** → **`/wizard`**.
 
+- **Unfamiliar codebase — “explain this repo”** → **`/repository-understanding`**. It reverse-engineers the system and writes a teaching book under `.scratch/repository-understanding/`. Use when onboarding to a repo you have never seen; use **`/improve-codebase-architecture`** later when you already understand it and want deepening opportunities.
+
 ## Codebase health
 
 Not feature work — upkeep.
@@ -79,6 +81,7 @@ Off the main flow entirely.
 - **`/grill-me`** — the same relentless interview as `/grill-with-docs`, but for when you have **no codebase**. Stateless: it saves nothing locally, builds no `CONTEXT.md`. Reach for it to sharpen any plan or design that doesn't live in a repo.
 - **`/prototype`** — a small, throwaway program that answers one design question: does this state model feel right, or what should this UI look like. Throwaway from day one — keep the answer, delete the code. It's the detour in step 2 of the main flow, but reach for it any time a design question is hard to settle on paper.
 - **`/research`** — delegate reading legwork to a **background agent**: it investigates a question against **primary sources**, then leaves a cited Markdown file in the repo. Keep working while it reads. The file it produces is something to take *into* the main flow at `/grill-with-docs` — research feeds the thinking, it doesn't replace it.
+- **`/repository-understanding`** — teach an unfamiliar repository end-to-end into a mental model (architecture, domain, runtime paths, black boxes, learning roadmap), written as a book under `.scratch/repository-understanding/`. Triggers on “explain this repo” / “onboard me to this codebase”.
 - **`/teach`** — learn a concept over multiple sessions, using the current directory as a stateful workspace.
 - **`/writing-fragments`**, **`/writing-beats`**, and **`/writing-shape`** — explore-then-shape writing workflows.
 - **`/writing-great-skills`** — reference for writing and editing skills well.

@@ -1,0 +1,3 @@
+interface:
+  display_name: "Repository Understanding"
+  short_description: "Explain this repo into a mental model"

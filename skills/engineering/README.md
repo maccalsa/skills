@@ -19,5 +19,5 @@ Daily coding, issue, architecture, debugging, and repo-operations workflows.
 
 - `branch-diff-code-review`, `code-review`
 - `codebase-design`, `domain-modeling`, `karpathy-guidelines`
-- `diagnosing-bugs`, `prototype`, `research`, `resolving-merge-conflicts`, `tdd`
+- `diagnosing-bugs`, `prototype`, `repository-understanding`, `research`, `resolving-merge-conflicts`, `tdd`
 - `git-recent-commits-report`, `mirror-repo-github`, `neon-postgres`, `neon-postgres-egress-optimizer`, `x-dotfiles-script`

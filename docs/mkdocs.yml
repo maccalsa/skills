@@ -52,6 +52,7 @@ nav:
       - neon-postgres: skills/neon-postgres.md
       - neon-postgres-egress-optimizer: skills/neon-postgres-egress-optimizer.md
       - prototype: skills/prototype.md
+      - repository-understanding: skills/repository-understanding.md
       - research: skills/research.md
       - resolving-merge-conflicts: skills/resolving-merge-conflicts.md
       - setup-agent-skills: skills/setup-agent-skills.md
