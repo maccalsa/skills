@@ -59,9 +59,9 @@ flowchart LR
   decision -->|Yes| handoff1[handoff]
   handoff1 --> proto[prototype]
   proto --> handoff2[handoff]
-  handoff2 --> prd[to-prd]
+  handoff2 --> prd[to-spec]
   decision -->|No| prd
-  prd --> issues[to-issues]
+  prd --> issues[to-tickets]
   issues --> implement[implement]
   implement --> review[code-review]
 ```

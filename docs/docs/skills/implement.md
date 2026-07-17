@@ -1,6 +1,6 @@
 # implement
 
-Implement a piece of work based on a PRD or set of issues.
+Implement a piece of work based on a spec or set of tickets.
 
 ## Quickstart
 

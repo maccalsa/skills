@@ -12,7 +12,7 @@ This repo follows the small, composable structure of [Matt Pocock's skills](http
 npx skills@latest add maccalsa/skills
 ```
 
-Pick the skills and target agents you want. Include `/setup-agent-skills` for repositories that will use issue, triage, PRD, or domain-documentation workflows.
+Pick the skills and target agents you want. Include `/setup-agent-skills` for repositories that will use issue, triage, spec, or domain-documentation workflows.
 
 Install one skill:
 

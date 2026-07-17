@@ -52,12 +52,14 @@ nav:
       - neon-postgres: skills/neon-postgres.md
       - neon-postgres-egress-optimizer: skills/neon-postgres-egress-optimizer.md
       - prototype: skills/prototype.md
+      - research: skills/research.md
       - resolving-merge-conflicts: skills/resolving-merge-conflicts.md
       - setup-agent-skills: skills/setup-agent-skills.md
       - tdd: skills/tdd.md
-      - to-issues: skills/to-issues.md
-      - to-prd: skills/to-prd.md
+      - to-tickets: skills/to-tickets.md
+      - to-spec: skills/to-spec.md
       - triage: skills/triage.md
+      - wayfinder: skills/wayfinder.md
       - x-dotfiles-script: skills/x-dotfiles-script.md
       - edit-article: skills/edit-article.md
       - caveman: skills/caveman.md
@@ -66,6 +68,7 @@ nav:
       - grill-me: skills/grill-me.md
       - grilling: skills/grilling.md
       - handoff: skills/handoff.md
+      - teach: skills/teach.md
       - write-a-skill: skills/write-a-skill.md
       - write-like-me: skills/write-like-me.md
       - writing-great-skills: skills/writing-great-skills.md

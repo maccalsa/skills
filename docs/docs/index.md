@@ -10,7 +10,7 @@ This repo keeps the small composable style from Matt Pocock's skills repository,
 npx skills@latest add maccalsa/skills
 ```
 
-Then run `/setup-agent-skills` once in any repository that will use issue, triage, PRD, or domain-documentation workflows.
+Then run `/setup-agent-skills` once in any repository that will use issue, triage, spec, or domain-documentation workflows.
 
 ## Browse
 

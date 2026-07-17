@@ -5,10 +5,3 @@ disable-model-invocation: true
 ---
 
 Run a `/grilling` session, using the `/domain-modeling` skill.
-
-## Local refinements
-
-The original local templates remain available for projects that already used them:
-
-- [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md)
-- [ADR-FORMAT.md](./ADR-FORMAT.md)
